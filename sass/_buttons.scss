@@ -1,0 +1,35 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.transparent-btn {
+  @include m.btn-style;
+  border: none;
+
+  &:hover {
+    @include m.btn-hover-style;
+  }
+}
+
+.outlined-btn {
+  @include m.btn-style;
+  border: 1px solid v.$Almost-Black;
+
+  &:hover {
+    @include m.btn-hover-style;
+  }
+}
+
+.primary-btn {
+  width: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  background-color: v.$Almost-Black;
+  color: v.$Almost-White;
+  cursor: pointer;
+
+  &:hover {
+    @include m.btn-hover-style;
+    background-color: v.$Almost-White;
+    border: 1px solid v.$Almost-Black;
+  }
+}

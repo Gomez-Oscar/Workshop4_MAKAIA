@@ -1,0 +1,91 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+main {
+  @include m.flex-center;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-container {
+  display: flex;
+  width: 80%;
+  gap: 5rem;
+}
+
+.main-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.desktop-image {
+  width: 100%;
+}
+
+.main-heading {
+  font-size: 4rem;
+}
+
+.main-content {
+  font-size: 18px;
+  line-height: 1.8;
+  color: v.$Medium-Gray;
+}
+
+.logos {
+  @include m.flex-center;
+  justify-content: space-between;
+}
+
+.mobile-image {
+  display: none;
+}
+
+// media query
+
+@media screen and (max-width: 880px) {
+  main {
+    align-items: flex-start;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .main-left {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .main-right {
+    width: 100%;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    display: block;
+    width: 100%;
+  }
+
+  .main-heading {
+    font-size: 2.2rem;
+
+    br {
+      display: none;
+    }
+  }
+
+  .logos {
+    width: 100%;
+    padding-inline: 1rem;
+    flex-wrap: wrap;
+  }
+}

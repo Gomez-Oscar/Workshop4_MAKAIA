@@ -1,3 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Epilogue:wght@500;700&display=swap");
+.transparent-btn {
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  color: hsl(0, 0%, 41%);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.transparent-btn:hover {
+  color: hsl(0, 0%, 8%);
+  font-weight: 700;
+}
 
+.outlined-btn {
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  color: hsl(0, 0%, 41%);
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid hsl(0, 0%, 8%);
+}
+.outlined-btn:hover {
+  color: hsl(0, 0%, 8%);
+  font-weight: 700;
+}
+
+.primary-btn {
+  width: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  cursor: pointer;
+}
+.primary-btn:hover {
+  color: hsl(0, 0%, 8%);
+  font-weight: 700;
+  background-color: hsl(0, 0%, 98%);
+  border: 1px solid hsl(0, 0%, 8%);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 3rem;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  margin-left: 4rem;
+  list-style: none;
+  gap: 2.5rem;
+}
+.nav-links li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: hsl(0, 0%, 41%);
+  gap: 0.5rem;
+  position: relative;
+  user-select: none;
+}
+.nav-links li:hover {
+  color: hsl(0, 0%, 8%);
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.sub-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: hsl(0, 0%, 98%);
+  gap: 1rem;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.75);
+  padding: 1rem;
+  border-radius: 10px;
+}
+.sub-menu.one {
+  bottom: -170px;
+  right: 0;
+}
+.sub-menu.two {
+  bottom: -136px;
+}
+.sub-menu .sub-link {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  gap: 0.5rem;
+}
+
+.active .arrow {
+  transform: rotate(180deg);
+  transition: 0.2s;
+}
+
+.active-menu {
+  display: flex !important;
+}
+
+@media screen and (max-width: 880px) {
+  .nav-container {
+    padding-inline: 1rem;
+  }
+  .mobile-menu-btn {
+    display: flex;
+    cursor: pointer;
+    z-index: 999;
+  }
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 70%;
+    background-color: hsl(0, 0%, 98%);
+    padding: 5rem 2rem;
+  }
+  .mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+  }
+  .mobile-links li {
+    display: flex;
+    color: hsl(0, 0%, 41%);
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .mobile-links li p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .mobile-sub {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+  }
+  .overflow {
+    background-color: black;
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    opacity: 0.7;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-right {
+    display: none;
+  }
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-container {
+  display: flex;
+  width: 80%;
+  gap: 5rem;
+}
+
+.main-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.desktop-image {
+  width: 100%;
+}
+
+.main-heading {
+  font-size: 4rem;
+}
+
+.main-content {
+  font-size: 18px;
+  line-height: 1.8;
+  color: hsl(0, 0%, 41%);
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-image {
+  display: none;
+}
+
+@media screen and (max-width: 880px) {
+  main {
+    align-items: flex-start;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .main-left {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  .main-right {
+    width: 100%;
+  }
+  .desktop-image {
+    display: none;
+  }
+  .mobile-image {
+    display: block;
+    width: 100%;
+  }
+  .main-heading {
+    font-size: 2.2rem;
+  }
+  .main-heading br {
+    display: none;
+  }
+  .logos {
+    width: 100%;
+    padding-inline: 1rem;
+    flex-wrap: wrap;
+  }
+}
+* {
+  font-family: "Epilogue", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,19 @@
+@use 'variables' as v;
+
+@mixin btn-style {
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  color: v.$Medium-Gray;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+@mixin btn-hover-style {
+  color: v.$Almost-Black;
+  font-weight: 700;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
